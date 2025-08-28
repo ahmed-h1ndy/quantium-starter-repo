@@ -22,8 +22,8 @@ df.drop('price', axis = 1, inplace=True)
 df.drop('quantity', axis = 1, inplace = True)
 df.drop('product', axis = 1, inplace = True)
 
+df.to_csv('daily_sales_data_full.csv')
+
 print(df)
-
-
 
 
