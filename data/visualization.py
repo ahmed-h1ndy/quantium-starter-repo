@@ -10,6 +10,11 @@ df = pd.read_csv('daily_sales_data_full.csv')
 
 app = Dash()
 
+colors = {
+    'background': '#111111',
+    'text': '#7FDBFF'
+}
+
 fig = px.line(df, x="date", y="sales")
 
 app.layout = html.Div(children=[
@@ -25,4 +30,6 @@ app.layout = html.Div(children=[
     )
 ])
 
-app.run(debug=True)
+
+if __name__ == "__main__":
+    app.run(debug=True)
